@@ -14,6 +14,8 @@
 #include <windows.h>
 #include <conio2.h>
 
+//Estoy utilizando GitHub
+
 using namespace std;
 
 #define maxfil 25
@@ -25,8 +27,8 @@ int main() {
 	srand(time(NULL));
 
 	char resp;
-	int fila,columna;
-	int color;
+	//int fila,columna;
+	//int color;
 
 	cout<<"Desea ejecutar el programa s/n:";
 	cin>>resp;
