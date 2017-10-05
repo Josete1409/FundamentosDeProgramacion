@@ -59,11 +59,6 @@ int main() {
 
 	//¿que signfica esta sentencia? --> Posiciona el cursor en la fila y columna que haya en las variables columna y fila.
 	gotoxy(columna,fila);
-	gotoxy(columna=1,fila=1);
-	gotoxy(columna=79,fila=1);
-	gotoxy(columna=40,fila=12);
-	gotoxy(columna=1,fila=24);
-	gotoxy(columna=79,fila=24);
 
 	//¿que signfica esta sentencia? --> Imprime por pantalla una variable tipo char.
 	printf("%c", char(219));
