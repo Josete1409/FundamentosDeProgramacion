@@ -12,8 +12,8 @@
 
 using namespace std;
 
-void amayusculas (char letra);
-void aminusculas (char letra);
+char amayusculas (char letra);
+char aminusculas (char letra);
 
 int main() {
 
@@ -65,22 +65,40 @@ int main() {
 	return 0;
 }
 
-void aminusculas (char letra){
+char aminusculas (char letra){
 
 	//Caracteres ASCII -- Mayusculas (65-90)
 
+	if(letra>=65 && letra<=90){
 
-	letra= letra+32;	//La diferencia que hay del 65 al 97 es = 32 y como siguen en el mismo orden lo unico que hay que hacer es sumarle esa diferencia
-	cout<<"En minuscula es: "<<letra<<endl;
+		letra= letra+32;	//La diferencia que hay del 65 al 97 es = 32 y como siguen en el mismo orden lo unico que hay que hacer es sumarle esa diferencia
+		cout<<"En minuscula es: "<<letra<<endl;
+
+	}else{
+
+		cout<<"La letra ya es mayuscula: "<<letra<<endl;
+
+	}
+
+	return letra;
 
 }
 
-void amayusculas (char letra){
+char amayusculas (char letra){
 
 	//Caracteres ASCII -- Minusculas (97-122)
 
+	if(letra>=97 && letra<=122){
 
-	letra= letra-32;
-	cout<<"En mayuscula es: "<<letra<<endl;
+		letra= letra-32;
+		cout<<"En mayuscula es: "<<letra<<endl;
+
+	}else{
+
+		cout<<"La letra ya es minuscula: "<<letra<<endl;
+
+	}
+
+	return letra;
 
 }
