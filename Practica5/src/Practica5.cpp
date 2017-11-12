@@ -2,7 +2,8 @@
 // Name        : Practica5.cpp
 // Author      : Jose Antonio Alvarez Nieto
 // Version     :
-// Description :
+// Description : Implementar modulos y hacer que se mueva el caracter dentro de los limites de nuestro
+// 				 laberinto.
 //============================================================================
 
 /*#include <iostream>
@@ -56,24 +57,29 @@ void intercambio_correcto(int & n1, int & n2){
 }
  */
 
-
 #include <iostream>
 #include <conio2.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <windows.h>
+#include <conio.h>
+
+#define ARRIBA 72
+#define ABAJO 80
+#define IZQUIERDA 75
+#define DERECHA 77
 
 using namespace std;
 
 int menu (void);
 void informacion(int & columna, int & fila, int & ancho_columna, int & ancho_fila, int & x, int & y, int & color);
 void pinta_laberinto (int columna, int fila, int ancho_columna, int ancho_fila);
-void punto_de_partida(int x, int y, int color, int limider, int limiizq, int limisup, int limiinf);
-void mover(int tecla, int & x, int & y, int limider, int limiizq, int limisup, int limiinf);
+void punto_de_partida(int x, int y, int color, int columna, int fila, int ancho_columna, int ancho_fila);
+void mover(int tecla, int & x, int & y, int columna, int fila, int ancho_columna, int ancho_fila);
 
 int main() {
 
-	int opcion, columna, fila, ancho_columna, ancho_fila, x, y, color, limider, limiizq, limisup, limiinf, tecla;
+	int opcion, columna, fila, ancho_columna, ancho_fila, x, y, color, tecla;
 
 	clrscr();
 	opcion=menu();
@@ -125,16 +131,59 @@ int main() {
 		if(opcion==3 || opcion==4 || opcion==5){
 
 			informacion(columna, fila, ancho_fila, ancho_columna, x, y, color);
-			pinta_laberinto(columna, fila, ancho_columna, ancho_fila);
-			punto_de_partida(x, y, color, limider, limiizq, limisup, limiinf);
-			mover(tecla, x, y, limider, limiizq, limisup, limiinf);
+			punto_de_partida(x, y, color, columna, fila, ancho_fila, ancho_columna);
+			mover(tecla, x, y, columna, fila, ancho_fila, ancho_columna);
 		}
 		opcion=menu();
 	}
 	return 0;
 }
 
-void mover(int tecla, int & x, int & y, int limider, int limiizq, int limisup, int limiinf){
+void ocultarCursor(){
+
+	HANDLE hCon;
+	hCon = GetStdHandle(STD_OUTPUT_HANDLE);
+	CONSOLE_CURSOR_INFO cci;
+	cci.dwSize = 2;
+	cci.bVisible = FALSE;
+
+	SetConsoleCursorInfo(hCon,&cci);
+}
+
+void mover(int tecla, int & x, int & y, int columna, int fila, int ancho_columna, int ancho_fila){
+
+	ocultarCursor();
+
+	bool game_over=false;
+	while(!game_over){
+		if(kbhit()){
+			tecla = getch();
+			gotoxy(x,y);
+			printf(" ");
+			if(tecla == ARRIBA && y-1>fila){
+				y--;
+				PlaySound(TEXT("sonido_mover.wav"),NULL,SND_ASYNC);
+			}
+			if(tecla == ABAJO && y+1<fila+ancho_fila){
+				y++;
+				PlaySound(TEXT("sonido_mover.wav"),NULL,SND_ASYNC);
+			}
+			if(tecla == IZQUIERDA && x-1>columna){
+				x--;
+				PlaySound(TEXT("sonido_mover.wav"),NULL,SND_ASYNC);
+			}
+			if(tecla == DERECHA && x+1<columna+ancho_columna){
+				x++;
+				PlaySound(TEXT("sonido_mover.wav"),NULL,SND_ASYNC);
+			}
+			gotoxy(x,y);
+			printf("%c", char(219));
+
+			if(tecla == 27) game_over=true; //TECLA ESC
+
+		}
+		Sleep(20);
+	}
 
 }
 
@@ -189,9 +238,14 @@ void informacion(int & columna, int & fila, int & ancho_columna, int & ancho_fil
 		cout<<"Introduce la coordenada inicial del caracter a mover en el eje y(Entre "<<fila<<" y "<<fila+ancho_fila<<"): "<<endl;
 		cin>>y;
 	}
+	pinta_laberinto(columna, fila, ancho_columna, ancho_fila);
 }
 
-void punto_de_partida(int x, int y, int color, int limider, int limiizq, int limisup, int limiinf){
+void punto_de_partida(int x, int y, int color, int columna, int fila, int ancho_columna, int ancho_fila){
+
+	textcolor(color);
+	gotoxy(x,y);
+	printf("%c", char(219));
 
 }
 
@@ -218,6 +272,7 @@ void pinta_laberinto (int columna, int fila, int ancho_columna, int ancho_fila){
 			gotoxy(columna+ancho_columna, i);
 			printf("%c", char(219));
 		}
+
 		textcolor(WHITE);
 
 	}else{
@@ -238,9 +293,8 @@ void pinta_laberinto (int columna, int fila, int ancho_columna, int ancho_fila){
 			gotoxy(columna+ancho_columna,i);
 			printf("%c", char(219));
 		}
-	}
 
-	Sleep(5000);
+	}
 
 }
 
@@ -249,6 +303,7 @@ int menu (void){
 	int opcion;
 
 	clrscr();
+	textcolor(WHITE);
 	cout<<"1.- Registrar jugador nuevo."<<endl;
 	cout<<"2.- Jugador existente."<<endl;
 	cout<<"3.- Caza de numeros pares."<<endl;
