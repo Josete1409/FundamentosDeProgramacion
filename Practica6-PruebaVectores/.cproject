@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?fileVersion 4.0.0?><cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
+	<storageModule moduleId="org.eclipse.cdt.core.settings">
+		<cconfiguration id="cdt.managedbuild.config.gnu.mingw.exe.debug.1043197325">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="cdt.managedbuild.config.gnu.mingw.exe.debug.1043197325" moduleId="org.eclipse.cdt.core.settings" name="Debug">
+				<externalSettings/>
+				<extensions>
+					<extension id="org.eclipse.cdt.core.PE" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug" cleanCommand="rm -rf" description="" id="cdt.managedbuild.config.gnu.mingw.exe.debug.1043197325" name="Debug" parent="cdt.managedbuild.config.gnu.mingw.exe.debug">
+					<folderInfo id="cdt.managedbuild.config.gnu.mingw.exe.debug.1043197325." name="/" resourcePath="">
+						<toolChain id="cdt.managedbuild.toolchain.gnu.mingw.exe.debug.233943758" name="MinGW GCC" superClass="cdt.managedbuild.toolchain.gnu.mingw.exe.debug">
+							<targetPlatform id="cdt.managedbuild.target.gnu.platform.mingw.exe.debug.1042371573" name="Debug Platform" superClass="cdt.managedbuild.target.gnu.platform.mingw.exe.debug"/>
+							<builder buildPath="${workspace_loc:/Practica6}/Debug" id="cdt.managedbuild.tool.gnu.builder.mingw.base.1913240939" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="CDT Internal Builder" superClass="cdt.managedbuild.tool.gnu.builder.mingw.base"/>
+							<tool id="cdt.managedbuild.tool.gnu.assembler.mingw.exe.debug.1066226009" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler.mingw.exe.debug">
+								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.2102963315" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
+							</tool>
+							<tool id="cdt.managedbuild.tool.gnu.archiver.mingw.base.1791675698" name="GCC Archiver" superClass="cdt.managedbuild.tool.gnu.archiver.mingw.base"/>
+							<tool id="cdt.managedbuild.tool.gnu.cpp.compiler.mingw.exe.debug.1296173371" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.mingw.exe.debug">
+								<option id="gnu.cpp.compiler.mingw.exe.debug.option.optimization.level.2130703051" name="Optimization Level" superClass="gnu.cpp.compiler.mingw.exe.debug.option.optimization.level" value="gnu.cpp.compiler.optimization.level.none" valueType="enumerated"/>
+								<option id="gnu.cpp.compiler.mingw.exe.debug.option.debugging.level.1216449518" name="Debug Level" superClass="gnu.cpp.compiler.mingw.exe.debug.option.debugging.level" value="gnu.cpp.compiler.debugging.level.max" valueType="enumerated"/>
+								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.2102602423" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
+							</tool>
+							<tool id="cdt.managedbuild.tool.gnu.c.compiler.mingw.exe.debug.1329185420" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.mingw.exe.debug">
+								<option defaultValue="gnu.c.optimization.level.none" id="gnu.c.compiler.mingw.exe.debug.option.optimization.level.686264300" name="Optimization Level" superClass="gnu.c.compiler.mingw.exe.debug.option.optimization.level" valueType="enumerated"/>
+								<option id="gnu.c.compiler.mingw.exe.debug.option.debugging.level.1647115595" name="Debug Level" superClass="gnu.c.compiler.mingw.exe.debug.option.debugging.level" value="gnu.c.debugging.level.max" valueType="enumerated"/>
+								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.2061033340" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
+							</tool>
+							<tool id="cdt.managedbuild.tool.gnu.c.linker.mingw.exe.debug.99764378" name="MinGW C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.mingw.exe.debug"/>
+							<tool id="cdt.managedbuild.tool.gnu.cpp.linker.mingw.exe.debug.1655724321" name="MinGW C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.mingw.exe.debug">
+								<option id="gnu.cpp.link.option.libs.19777443" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs" valueType="libs">
+									<listOptionValue builtIn="false" value="conio"/>
+								</option>
+								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.1520047222" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
+									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
+								</inputType>
+							</tool>
+						</toolChain>
+					</folderInfo>
+					<sourceEntries>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src"/>
+					</sourceEntries>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+		<cconfiguration id="cdt.managedbuild.config.gnu.mingw.exe.release.1025121067">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="cdt.managedbuild.config.gnu.mingw.exe.release.1025121067" moduleId="org.eclipse.cdt.core.settings" name="Release">
+				<externalSettings/>
+				<extensions>
+					<extension id="org.eclipse.cdt.core.PE" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.release" cleanCommand="rm -rf" description="" id="cdt.managedbuild.config.gnu.mingw.exe.release.1025121067" name="Release" parent="cdt.managedbuild.config.gnu.mingw.exe.release">
+					<folderInfo id="cdt.managedbuild.config.gnu.mingw.exe.release.1025121067." name="/" resourcePath="">
+						<toolChain id="cdt.managedbuild.toolchain.gnu.mingw.exe.release.637626018" name="MinGW GCC" superClass="cdt.managedbuild.toolchain.gnu.mingw.exe.release">
+							<targetPlatform id="cdt.managedbuild.target.gnu.platform.mingw.exe.release.1935538178" name="Debug Platform" superClass="cdt.managedbuild.target.gnu.platform.mingw.exe.release"/>
+							<builder buildPath="${workspace_loc:/Practica6}/Release" id="cdt.managedbuild.tool.gnu.builder.mingw.base.1432748363" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="CDT Internal Builder" superClass="cdt.managedbuild.tool.gnu.builder.mingw.base"/>
+							<tool id="cdt.managedbuild.tool.gnu.assembler.mingw.exe.release.613001219" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler.mingw.exe.release">
+								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.1973385180" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
+							</tool>
+							<tool id="cdt.managedbuild.tool.gnu.archiver.mingw.base.241340839" name="GCC Archiver" superClass="cdt.managedbuild.tool.gnu.archiver.mingw.base"/>
+							<tool id="cdt.managedbuild.tool.gnu.cpp.compiler.mingw.exe.release.1117791387" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.mingw.exe.release">
+								<option id="gnu.cpp.compiler.mingw.exe.release.option.optimization.level.523025901" name="Optimization Level" superClass="gnu.cpp.compiler.mingw.exe.release.option.optimization.level" value="gnu.cpp.compiler.optimization.level.most" valueType="enumerated"/>
+								<option id="gnu.cpp.compiler.mingw.exe.release.option.debugging.level.1425167255" name="Debug Level" superClass="gnu.cpp.compiler.mingw.exe.release.option.debugging.level" value="gnu.cpp.compiler.debugging.level.none" valueType="enumerated"/>
+								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1942207126" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
+							</tool>
+							<tool id="cdt.managedbuild.tool.gnu.c.compiler.mingw.exe.release.270314841" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.mingw.exe.release">
+								<option defaultValue="gnu.c.optimization.level.most" id="gnu.c.compiler.mingw.exe.release.option.optimization.level.947848525" name="Optimization Level" superClass="gnu.c.compiler.mingw.exe.release.option.optimization.level" valueType="enumerated"/>
+								<option id="gnu.c.compiler.mingw.exe.release.option.debugging.level.609189319" name="Debug Level" superClass="gnu.c.compiler.mingw.exe.release.option.debugging.level" value="gnu.c.debugging.level.none" valueType="enumerated"/>
+								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.1320594150" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
+							</tool>
+							<tool id="cdt.managedbuild.tool.gnu.c.linker.mingw.exe.release.233619183" name="MinGW C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.mingw.exe.release"/>
+							<tool id="cdt.managedbuild.tool.gnu.cpp.linker.mingw.exe.release.1168881930" name="MinGW C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.mingw.exe.release">
+								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.892945995" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
+									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
+								</inputType>
+							</tool>
+						</toolChain>
+					</folderInfo>
+					<sourceEntries>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src"/>
+					</sourceEntries>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+	</storageModule>
+	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+		<project id="Practica6.cdt.managedbuild.target.gnu.mingw.exe.906612508" name="Executable" projectType="cdt.managedbuild.target.gnu.mingw.exe"/>
+	</storageModule>
+	<storageModule moduleId="scannerConfiguration">
+		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.mingw.exe.release.1025121067;cdt.managedbuild.config.gnu.mingw.exe.release.1025121067.;cdt.managedbuild.tool.gnu.cpp.compiler.mingw.exe.release.1117791387;cdt.managedbuild.tool.gnu.cpp.compiler.input.1942207126">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.mingw.exe.debug.1043197325;cdt.managedbuild.config.gnu.mingw.exe.debug.1043197325.;cdt.managedbuild.tool.gnu.cpp.compiler.mingw.exe.debug.1296173371;cdt.managedbuild.tool.gnu.cpp.compiler.input.2102602423">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.mingw.exe.release.1025121067;cdt.managedbuild.config.gnu.mingw.exe.release.1025121067.;cdt.managedbuild.tool.gnu.c.compiler.mingw.exe.release.270314841;cdt.managedbuild.tool.gnu.c.compiler.input.1320594150">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.mingw.exe.debug.1043197325;cdt.managedbuild.config.gnu.mingw.exe.debug.1043197325.;cdt.managedbuild.tool.gnu.c.compiler.mingw.exe.debug.1329185420;cdt.managedbuild.tool.gnu.c.compiler.input.2061033340">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
+	<storageModule moduleId="refreshScope" versionNumber="2">
+		<configuration configurationName="Debug">
+			<resource resourceType="PROJECT" workspacePath="/Practica6"/>
+		</configuration>
+		<configuration configurationName="Release">
+			<resource resourceType="PROJECT" workspacePath="/Practica6"/>
+		</configuration>
+	</storageModule>
+</cproject>
