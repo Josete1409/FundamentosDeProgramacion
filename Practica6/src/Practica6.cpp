@@ -13,15 +13,15 @@
 #include <conio2.h>
 #include <conio.h>
 #include <windows.h>
-//#include <fstream.h>
+#include <fstream.h>
 
 //Constantes
-#define max 10
-//#define max_archivo 100
+#define max 19
+#define max_archivo 100
 
 //Declaracion de variables - vectores
 typedef int vector_notas[max];
-//typedef int vector_archivo[max_archivo];
+typedef int vector_archivo[max_archivo];
 
 using namespace std;
 
@@ -106,22 +106,32 @@ int menu (void){
 
 void inicializar_notas(vector_notas notas){
 
-	notas[0]=261; //Do
+	notas[0]=261; //Do Si-B
 	notas[1]=293; //Re
-	notas[2]=329; //Mi
-	notas[3]=349; //Fa
+	notas[2]=329; //Mi Fa-B
+	notas[3]=349; //Fa Mi#
 	notas[4]=392; //Sol
 	notas[5]=440; //La
-	notas[6]=493; //Si
+	notas[6]=493; //Si Do-B
 	notas[7]=523; //Do'
-	notas[8]=370; //Fa#
-	notas[9]=587; //Re'
+	notas[8]=587; //Re'
+	notas[9]=659; //Mi'
+	notas[10]=698; //Fa'
+	notas[11]=784; //Sol'
+	notas[12]=277; //Re-B Do#
+	notas[13]=311; //Mi-B Re#
+	notas[14]=370; //Sol-B Fa#
+	notas[15]=415; //La-B Sol#
+	notas[16]=466; //Si-B La#
+	notas[17]=554; //Re'-B
+	notas[18]=622; //Mi'-B
+	notas[19]=740; //Sol'-B
 
 }
 
 void DoaSi(const vector_notas notas){
 
-	for(int i=0; i<max-2; i++){
+	for(int i=0; i<max-12; i++){
 
 		Beep(notas[i],500);
 	}
@@ -129,7 +139,7 @@ void DoaSi(const vector_notas notas){
 
 void SiaDo(const vector_notas notas){
 
-	for(int i=max-3; i>=0; i--){
+	for(int i=max-13; i>=0; i--){
 
 		Beep(notas[i],500);
 	}
@@ -137,63 +147,32 @@ void SiaDo(const vector_notas notas){
 
 void cumple_feliz(const vector_notas notas){
 
-	/*vector_archivo archivo;
-
+	vector_archivo archivo;
+	int nota, i;
 	ifstream lectura;
 
-	//Llenamos el vector archivo todas sus posiciones a -1
-	for(int i=0; i<max_archivo; i++){
-
-		archivo[i]=-1;
-	}
-
-	lectura.open("cumple_feliz.txt");
+	lectura.open("cumple.txt");
 
 	if(lectura.fail()){
 
-		cout<<"Error en la apertura del fichero cumple_feliz.txt"<<endl;
+		cout<<"Error en la apertura del fichero"<<endl;
+
 	}else{
 
+		lectura>>nota;
+		i=0;
+		Beep(notas[nota],500);
 		while(!lectura.eof()){
 
-			for(int i=0; i<max_archivo; i++){
-
-				lectura>>archivo[i];
-
-			}
-		}
-
-		while(archivo[i]!=-1){
-			Beep(archivo[i],500);
+			archivo[i]=nota;
+			lectura>>nota;
+			i++;
+			Beep(notas[nota],500);
 		}
 	}
-	lectura.close();*/
 
-	Beep(notas[1],500);
-	Beep(notas[1],500);
-	Beep(notas[2],500);
-	Beep(notas[1],500);
-	Beep(notas[4],500);
-	Beep(notas[8],500);
-	Beep(notas[1],500);
-	Beep(notas[1],500);
-	Beep(notas[2],500);
-	Beep(notas[1],500);
-	Beep(notas[5],500);
-	Beep(notas[4],500);
-	Beep(notas[1],500);
-	Beep(notas[1],500);
-	Beep(notas[9],500);
-	Beep(notas[6],500);
-	Beep(notas[4],500);
-	Beep(notas[8],500);
-	Beep(notas[2],500);
-	Beep(notas[7],500);
-	Beep(notas[7],500);
-	Beep(notas[6],500);
-	Beep(notas[4],500);
-	Beep(notas[5],500);
-	Beep(notas[4],500);
+	lectura.close();
+
 }
 
 void teclado(const vector_notas notas){
