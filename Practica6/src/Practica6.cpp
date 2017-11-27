@@ -13,7 +13,7 @@
 #include <conio2.h>
 #include <conio.h>
 #include <windows.h>
-#include <fstream.h>
+#include <fstream>
 
 //Constantes
 #define max 19

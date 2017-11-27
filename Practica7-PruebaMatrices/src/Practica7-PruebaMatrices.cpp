@@ -24,7 +24,7 @@ using namespace std;
 
 void inicializar_matriz(matriz_registros matriz);
 void mostrar_matriz(const matriz_registros matriz);
-bool buscar_matriz(const matriz_registros matriz, char caracter_buscar);
+bool buscar_matriz(const matriz_registros matriz, char caracter_buscar, int & f_encontrado, int & c_encontrado);
 
 int main() {
 
@@ -40,7 +40,7 @@ int main() {
 	cout<<"Introduza caracter: "<<endl;
 	cin>>caracter_buscar;
 
-	encontrado=buscar_matriz(matriz, caracter_buscar);
+	encontrado=buscar_matriz(matriz, caracter_buscar, f_encontrado, c_encontrado);
 
 	if(encontrado){
 
@@ -106,10 +106,10 @@ void mostrar_matriz(const matriz_registros matriz){
 
 }
 
-bool buscar_matriz(const matriz_registros matriz, char caracter_buscar){
+bool buscar_matriz(const matriz_registros matriz, char caracter_buscar, int & f_encontrado, int & c_encontrado){
 
 	bool encontrado;
-	int f, c, f_encontrado, c_encontrado;
+	int f, c;
 
 	encontrado = false;
 	f = 0;
