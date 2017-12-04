@@ -30,7 +30,7 @@ typedef registro matriz_registros[fila][columna];
 //Cabeceras de módulos
 void inicializar_matriz(matriz_registros matriz, int f1, int c1, int f2, int c2);
 void mostrar_matriz(const matriz_registros matriz);
-bool buscar_matriz(const matriz_registros matriz, char caracter_buscar, int & f_encontrado, int & c_encontrado, bool encontrado);
+bool buscar_matriz(const matriz_registros matriz, char caracter_buscar, int & f_encontrado, int & c_encontrado, bool & encontrado);
 
 
 //Implementación de módulos
@@ -82,7 +82,7 @@ void mostrar_matriz(const matriz_registros matriz){
 
 }
 
-bool buscar_matriz(const matriz_registros matriz, char caracter_buscar, int & f_encontrado, int & c_encontrado, bool encontrado){
+bool buscar_matriz(const matriz_registros matriz, char caracter_buscar, int & f_encontrado, int & c_encontrado, bool & encontrado){
 
 	int f, c;
 

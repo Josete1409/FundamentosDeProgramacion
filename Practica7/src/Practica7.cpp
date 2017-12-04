@@ -20,7 +20,6 @@ int main(int arg, char * argv[]) {
 	char caracter_buscar;
 	matriz_registros matriz;
 
-
 	f1=atoi(argv[1]);
 	c1=atoi(argv[2]);
 	f2=atoi(argv[3]);
@@ -46,11 +45,10 @@ int main(int arg, char * argv[]) {
 		cout<<"Buscamos si existe en la matriz un determinado caracter"<<endl;
 		cout<<"Introduzca caracter:";
 		cin>>caracter_buscar;
-		f_encontrado = -1;
-		c_encontrado = -1;
+
 		buscar_matriz(matriz, caracter_buscar, f_encontrado, c_encontrado, encontrado);
 
-		if(encontrado){
+		if(encontrado==true){
 
 			cout<<"el caracter "<<caracter_buscar<<" existe en la fila "<<f_encontrado<<" y columna "<<c_encontrado<<endl;
 
